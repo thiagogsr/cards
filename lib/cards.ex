@@ -25,7 +25,7 @@ defmodule Cards do
   @doc """
   Shuffles a deck.
 
-  ## TODO: Examples (i don't know how to do yet)
+  ## TODO: Examples (i don't know how to do it yet)
   """
   def shuffle(deck) do
     Enum.shuffle(deck)

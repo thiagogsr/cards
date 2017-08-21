@@ -11,7 +11,7 @@ defmodule CardsTest do
   test "shuffles a deck" do
     deck = Cards.create_deck
     Cards.shuffle(deck)
-    # TODO: make an assert (i don't know how to do yet)
+    # TODO: make an assert (i don't know how to do it yet)
   end
 
   test "checks if a card is in the deck when it is in" do
