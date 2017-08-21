@@ -9,11 +9,11 @@ defmodule Cards do
   ## Examples
 
       iex> Cards.create_deck
-      [:ace, :two, :three]
+      ["Ace", "Two", "Three"]
 
   """
   def create_deck do
-    [:ace, :two, :three]
+    ["Ace", "Two", "Three"]
   end
 
   @doc """
@@ -31,10 +31,10 @@ defmodule Cards do
   ## Examples
 
       iex> deck = Cards.create_deck
-      [:ace, :two, :three]
-      iex> Cards.contains?(deck, :two)
+      ["Ace", "Two", "Three"]
+      iex> Cards.contains?(deck, "Two")
       true
-      iex> Cards.contains?(deck, :four)
+      iex> Cards.contains?(deck, "Four")
       false
 
   """

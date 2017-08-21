@@ -3,7 +3,7 @@ defmodule CardsTest do
   doctest Cards
 
   test "creates a deck" do
-    assert Cards.create_deck == [:ace, :two, :three]
+    assert Cards.create_deck == ["Ace", "Two", "Three"]
   end
 
   test "shuffles a deck" do
@@ -14,11 +14,11 @@ defmodule CardsTest do
 
   test "checks if a card is in the deck when it is in" do
     deck = Cards.create_deck
-    assert Cards.contains?(deck, :two) == true
+    assert Cards.contains?(deck, "Two") == true
   end
 
   test "checks if a card is in the deck when it is not in" do
     deck = Cards.create_deck
-    assert Cards.contains?(deck, :five) == false
+    assert Cards.contains?(deck, "Five") == false
   end
 end
