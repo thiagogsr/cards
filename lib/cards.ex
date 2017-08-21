@@ -48,4 +48,21 @@ defmodule Cards do
   def contains?(deck, card) do
     Enum.member?(deck, card)
   end
+
+  @doc """
+  Saves a deck in your file system.
+
+  ## Examples
+
+      iex> deck = Cards.create_deck
+      ["Ace of Spades", "Ace of Clubs", "Two of Spades", "Two of Clubs",
+       "Three of Spades", "Three of Clubs"]
+      iex> Cards.save(deck, "my_deck")
+      :ok
+
+  """
+  def save(deck, filename) do
+    binary = :erlang.term_to_binary(deck)
+    File.write(filename, binary)
+  end
 end

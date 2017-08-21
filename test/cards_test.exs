@@ -23,4 +23,9 @@ defmodule CardsTest do
     deck = Cards.create_deck
     assert Cards.contains?(deck, "Five of Spades") == false
   end
+
+  test "saves a deck in your file system" do
+    deck = Cards.create_deck
+    assert Cards.save(deck, "my_deck") == :ok
+  end
 end
