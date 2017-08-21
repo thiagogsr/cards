@@ -106,4 +106,13 @@ defmodule Cards do
       {:error, _reason} -> "File not found"
     end
   end
+
+  @doc """
+  Creates a shuffled deck with *hand_size* cards
+  """
+  def create_hand(hand_size) do
+    Cards.create_deck
+    |> Cards.shuffle
+    |> Cards.deal(hand_size)
+  end
 end

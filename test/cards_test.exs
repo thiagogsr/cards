@@ -43,4 +43,9 @@ defmodule CardsTest do
   test "loads a deck from your file system when it does not exist" do
     assert Cards.load("my_deck_two") == "File not found"
   end
+
+  test "creates a shuffled hand with 3 cards" do
+    hand = Cards.create_hand(3)
+    assert Enum.count(hand) == 3
+  end
 end
