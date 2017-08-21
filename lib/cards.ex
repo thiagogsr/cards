@@ -9,11 +9,17 @@ defmodule Cards do
   ## Examples
 
       iex> Cards.create_deck
-      ["Ace", "Two", "Three"]
+      ["Ace of Spades", "Ace of Clubs", "Two of Spades", "Two of Clubs",
+       "Three of Spades", "Three of Clubs"]
 
   """
   def create_deck do
-    ["Ace", "Two", "Three"]
+    values = ["Ace", "Two", "Three"]
+    suits = ["Spades", "Clubs"]
+
+    for value <- values, suit <- suits do
+      "#{value} of #{suit}"
+    end
   end
 
   @doc """
@@ -31,10 +37,11 @@ defmodule Cards do
   ## Examples
 
       iex> deck = Cards.create_deck
-      ["Ace", "Two", "Three"]
-      iex> Cards.contains?(deck, "Two")
+      ["Ace of Spades", "Ace of Clubs", "Two of Spades", "Two of Clubs",
+       "Three of Spades", "Three of Clubs"]
+      iex> Cards.contains?(deck, "Two of Spades")
       true
-      iex> Cards.contains?(deck, "Four")
+      iex> Cards.contains?(deck, "Four of Clubs")
       false
 
   """
