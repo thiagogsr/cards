@@ -4,19 +4,6 @@ defmodule Cards do
   """
 
   @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Cards.hello
-      :world
-
-  """
-  def hello do
-    :world
-  end
-
-  @doc """
   Create a deck (list of cards).
 
   ## Examples

@@ -2,10 +2,6 @@ defmodule CardsTest do
   use ExUnit.Case
   doctest Cards
 
-  test "greets the world" do
-    assert Cards.hello() == :world
-  end
-
   test "creates a deck" do
     assert Cards.create_deck() == [:ace, :two, :three]
   end
