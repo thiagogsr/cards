@@ -1,6 +1,6 @@
 defmodule Cards do
   @moduledoc """
-  Documentation for Cards.
+  Creates a deck and manipulates cards.
   """
 
   @doc """
