@@ -50,7 +50,7 @@ defmodule Cards do
   end
 
   @doc """
-  Gets the first *hand_size* cards of the deck.
+  Gets the first `hand_size` cards of the deck.
 
   ## Examples
 
@@ -108,7 +108,7 @@ defmodule Cards do
   end
 
   @doc """
-  Creates a shuffled deck with *hand_size* cards
+  Creates a shuffled deck with `hand_size` cards
   """
   def create_hand(hand_size) do
     Cards.create_deck
