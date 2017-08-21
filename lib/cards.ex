@@ -1,10 +1,10 @@
 defmodule Cards do
   @moduledoc """
-  Creates a deck and manipulates cards.
+    Creates a deck and manipulates cards.
   """
 
   @doc """
-  Create a deck (list of cards).
+    Create a deck (list of cards).
 
   ## Examples
 
@@ -23,22 +23,18 @@ defmodule Cards do
   end
 
   @doc """
-  Shuffles a deck.
-
-  ## TODO: Examples (i don't know how to do it yet)
+    Shuffles a deck.
   """
   def shuffle(deck) do
     Enum.shuffle(deck)
   end
 
   @doc """
-  Checks if card is present in the deck.
+    Checks if card is present in the deck.
 
   ## Examples
 
       iex> deck = Cards.create_deck
-      ["Ace of Spades", "Ace of Clubs", "Two of Spades", "Two of Clubs",
-       "Three of Spades", "Three of Clubs"]
       iex> Cards.contains?(deck, "Two of Spades")
       true
       iex> Cards.contains?(deck, "Four of Clubs")
@@ -50,13 +46,11 @@ defmodule Cards do
   end
 
   @doc """
-  Gets the first `hand_size` cards of the deck.
+    Gets the first `hand_size` cards of the deck.
 
   ## Examples
 
       iex> deck = Cards.create_deck
-      ["Ace of Spades", "Ace of Clubs", "Two of Spades", "Two of Clubs",
-       "Three of Spades", "Three of Clubs"]
       iex> Cards.deal(deck, 2)
       ["Ace of Spades", "Ace of Clubs"]
 
@@ -67,13 +61,11 @@ defmodule Cards do
   end
 
   @doc """
-  Saves a deck in your file system.
+    Saves a deck in your file system.
 
   ## Examples
 
       iex> deck = Cards.create_deck
-      ["Ace of Spades", "Ace of Clubs", "Two of Spades", "Two of Clubs",
-       "Three of Spades", "Three of Clubs"]
       iex> Cards.save(deck, "my_deck")
       :ok
 
@@ -84,15 +76,12 @@ defmodule Cards do
   end
 
   @doc """
-  Load a deck from your file system.
+    Load a deck from your file system.
 
   ## Examples
 
       iex> deck = Cards.create_deck
-      ["Ace of Spades", "Ace of Clubs", "Two of Spades", "Two of Clubs",
-       "Three of Spades", "Three of Clubs"]
       iex> Cards.save(deck, "my_deck")
-      :ok
       iex> Cards.load("my_deck")
       ["Ace of Spades", "Ace of Clubs", "Two of Spades", "Two of Clubs",
        "Three of Spades", "Three of Clubs"]
@@ -108,7 +97,7 @@ defmodule Cards do
   end
 
   @doc """
-  Creates a shuffled deck with `hand_size` cards
+    Creates a shuffled deck with `hand_size` cards
   """
   def create_hand(hand_size) do
     Cards.create_deck
