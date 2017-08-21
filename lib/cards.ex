@@ -50,6 +50,23 @@ defmodule Cards do
   end
 
   @doc """
+  Gets the first *hand_size* cards of the deck.
+
+  ## Examples
+
+      iex> deck = Cards.create_deck
+      ["Ace of Spades", "Ace of Clubs", "Two of Spades", "Two of Clubs",
+       "Three of Spades", "Three of Clubs"]
+      iex> Cards.deal(deck, 2)
+      ["Ace of Spades", "Ace of Clubs"]
+
+  """
+  def deal(deck, hand_size) do
+    { hand, _rest_of_deck } = Enum.split(deck, hand_size)
+    hand
+  end
+
+  @doc """
   Saves a deck in your file system.
 
   ## Examples
