@@ -28,4 +28,14 @@ defmodule CardsTest do
     deck = Cards.create_deck
     assert Cards.save(deck, "my_deck") == :ok
   end
+
+  test "loads a deck from your file system when it exists" do
+    deck = Cards.create_deck
+    Cards.save(deck, "my_deck")
+    assert Cards.load("my_deck") == deck
+  end
+
+  test "loads a deck from your file system when it does not exist" do
+    assert Cards.load("my_deck_two") == "File not found"
+  end
 end

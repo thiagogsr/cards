@@ -65,4 +65,30 @@ defmodule Cards do
     binary = :erlang.term_to_binary(deck)
     File.write(filename, binary)
   end
+
+  @doc """
+  Load a deck from your file system.
+
+  ## Examples
+
+      iex> deck = Cards.create_deck
+      ["Ace of Spades", "Ace of Clubs", "Two of Spades", "Two of Clubs",
+       "Three of Spades", "Three of Clubs"]
+      iex> Cards.save(deck, "my_deck")
+      :ok
+      iex> Cards.load("my_deck")
+      ["Ace of Spades", "Ace of Clubs", "Two of Spades", "Two of Clubs",
+       "Three of Spades", "Three of Clubs"]
+      iex> Cards.load("my_deck_two")
+      "File not found"
+
+  """
+  def load(filename) do
+    {status, binary} = File.read(filename)
+
+    case status do
+      :ok -> :erlang.binary_to_term(binary)
+      :error -> "File not found"
+    end
+  end
 end
