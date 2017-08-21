@@ -15,4 +15,13 @@ defmodule Cards do
   def create_deck do
     [:ace, :two, :three]
   end
+
+  @doc """
+  Shuffles a deck.
+
+  ## TODO: Examples (i don't know how to do yet)
+  """
+  def shuffle(deck) do
+    Enum.shuffle(deck)
+  end
 end
