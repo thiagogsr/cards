@@ -5,4 +5,8 @@ defmodule CardsTest do
   test "greets the world" do
     assert Cards.hello() == :world
   end
+
+  test "creates a deck" do
+    assert Cards.create_deck() == [:ace, :two, :three]
+  end
 end
